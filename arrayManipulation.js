@@ -9,3 +9,17 @@ function processArray(numbers) {
 }
 const numbers = processArray([1, 2, 3, 4, 5]);
 console.log(numbers);
+
+
+function formatArrayStrings(strings, numbers) {
+  return strings.map((str, index) => {
+    if (numbers[index] % 2 === 0) {
+      return str.toUpperCase();
+    } else {
+      return str.toLowerCase();
+    }
+  });
+}
+export const words = ["Hello", "World", "GitHub", "Copilot"];
+export const strings = formatArrayStrings(words , numbers);
+console.log(strings);
